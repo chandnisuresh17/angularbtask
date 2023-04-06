@@ -1,0 +1,26 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-button',
+  templateUrl: './button.component.html',
+  styleUrls: ['./button.component.css']
+})
+export class ButtonComponent {
+  @Input() text: string = " ";
+  @Input() color: string = " ";
+  @output() btnClick = new EventEmitter();
+
+  constructor() {
+
+  }
+
+
+  ngOnInit(): void {
+  }
+
+  onClick() {
+    this.btnClick.emit();
+  }
+
+}
+}
